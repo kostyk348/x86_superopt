@@ -1,0 +1,15 @@
+[package]
+name = "x86_superopt"
+version = "0.1.0"
+edition = "2021"
+description = "Same-ISA x86_64 Binary Super-Optimizer — SDRE + vectorization + AVX2"
+
+[dependencies]
+sdre = { path = "../sdre" }
+capstone = "0.14"
+clap = { version = "4", features = ["derive"] }
+hex = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = true
